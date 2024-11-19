@@ -2,11 +2,48 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 header {
-  background-color: aquamarine;
-  height: 10vh;
+  background-color: greenyellow;
+  height: 70px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  }
+
+ header h1{
+  font-size: 4.5vw;
+  border: 3px solid blue;
+
+ }
+
+ header li{
+  font-size: 3vw;
+ }
+
+#logo img{
+ height: 65px;
+ margin-left: 10px;
+ border: 3px solid violet;
+}
+
+#logo{
+  display:flex ;
+  align-items: center;
+}
+
+#navbar ul {
+  display: flex; */
+  justify-content: space-evenly;
+   width: 5vw;
+list-style: none;
+margin-right: 20px;
+}
+
+#navbar nav{
+  border: 3px splid red;
 }
 
 main {
@@ -51,7 +88,7 @@ footer {
 }
 
 .prueba2{
-    width: 80%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
