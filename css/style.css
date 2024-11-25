@@ -286,3 +286,30 @@ cursor: pointer;
     justify-content: space-evenly;
     align-items: center;
 }
+
+#productos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.categorias{
+  margin-top: 60px;
+  text-align: center;
+  }
+
+  .categorias h2{
+    margin-bottom: 30px;
+   
+    color: #1A2526;
+   
+    }
+
+    #contenedor{
+      margin-top: 60px;
+      margin-bottom: 30px;
+     text-align: center;
+      color: #1A2526;
+     
+      }
