@@ -178,11 +178,11 @@ function createdCard(cardsContainer, card) {
   generateCard.innerHTML = `<img src="${card.image}" alt="">
     <h2>${card.artist}</h2>
     <p>Album: ${card.album}</p>
-    <p>Price: ${card.amount} ${"Pesos"}</p>`;
+    <p>Precio: ${card.amount} ${"Pesos"}</p>`;
 
   let newChild = document.createElement("div");
   newChild.classList.add("buttom", "fw-bold", "fs-5", "pb-2");
-  newChild.innerHTML = ` <a href="/details.html" class="btn btn-danger comprar">Comprar</a>
+  newChild.innerHTML = ` <a href="#" class="btn btn-danger comprar">Comprar</a>
     <a target="_blank" href="${card.video}" class="btn btn-danger comprar">Video</a>`;
 
   cardsContainer.appendChild(generateCard);

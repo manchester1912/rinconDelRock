@@ -62,7 +62,8 @@ const remeras = [
     id: 8,
     image: "../resourses/rollingHalloween.webp",
     name: "Halloween Rolling Stones",
-    description:"Remera de los Rolling Stones motivo Halloween de 100% algodón de color negro varios talles",
+    description:
+      "Remera de los Rolling Stones motivo Halloween de 100% algodón de color negro varios talles",
     size: "M, L",
     amount: 11000,
   },
@@ -78,18 +79,39 @@ function cardsHtml(arrayData, cardsContainer) {
   }
 }
 
+function mostrar(id) {
+  var parrafoMostrar = document.getElementById(id);
+
+
+  if (
+    parrafoMostrar.style.display === "none" ||
+    parrafoMostrar.style.display === ""
+  ) {
+    parrafoMostrar.style.display = "block";
+  } else {
+    parrafoMostrar.style.display = "none";
+  }
+}
+
 function createdCard(cardsContainer, card) {
   let generateCard = document.createElement("div");
   generateCard.classList.add("cards", "pt-2", "my-2", "mx-2", "text-white");
 
+
   generateCard.innerHTML = `<img src="${card.image}" alt="">
     <h2>${card.name}</h2>
-    <p>Talle: ${card.size}</p>`;
+    <p>Talles: ${card.size}</p>
+    <p>Precio: ${card.amount} ${"Pesos"}</p>
+    <p class="descripcion" id="descripcion-${card.id}" style="display: none;">${
+    card.description
+  }</p>`;
 
   let newChild = document.createElement("div");
-  newChild.classList.add("price", "fw-bold", "fs-5", "pb-2");
-  newChild.innerHTML = ` <p>Price: ${card.amount} ${"Pesos"}</p>
-    <a href="/details.html" class="btn btn-danger comprar">Details</a>`;
+  newChild.classList.add("buttom", "fw-bold", "fs-5", "pb-2");
+
+
+  newChild.innerHTML = ` <a href="#" class="btn btn-danger comprar">Comprar</a>
+    <button class="btn btn-danger comprar" onclick="mostrar('descripcion-${card.id}')">Descripción</button>`;
 
   cardsContainer.appendChild(generateCard);
   generateCard.appendChild(newChild);
